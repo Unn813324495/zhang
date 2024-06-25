@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				font-size: 20px;
+				background-color: #d5d5d5;
+				font-family: 华文楷体;
+				
+			}
+			#header{
+				width: 2000px;
+				height: 100px;
+				margin: 5px auto;
+				padding: 10px 0;
+				background-color: #acc2ea;
+				border-radius: 5px;
+			}
+			.logobox{
+				width: 600px;
+				margin: auto;
+				float: left;
+			}
+			.logobox img{
+				float: left;
+				width: 110px;
+				padding: 0px 0px 0px 50px;
+			}
+			.logobox h3{
+				float: right;
+				font-size: 50px;
+				line-height: 110px;
+				text-align: center;
+				color: #950000;
+				letter-spacing: 3px;
+				font-weight: normal;
+				font-family:华文行楷;
+			}
+			
+			#nav ul li {
+				width: 100px;
+				padding: 10px;
+				text-align: center;
+				float: left;
+				font-size: 25px;
+				list-style: none;
+				height: 70px;
+				line-height: 100px;
+				margin: 0 40px;
+				text-decoration: none;	
+			}
+			#nav ul li a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#nav ul li a:hover{
+				color: darkgoldenrod;
+			}
+			#nav ul .first a{
+				color:darkgoldenrod ;
+			}
+			.user a{
+				text-decoration: none;
+			}
+			#banner{
+				width: 2000px;
+				height: 1000px;
+				margin: auto;
+				position: relative;		
+			}
+			.imgLBT{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: opacity 2s ease-in-out;
+			}
+			.imgLBT.active{
+				opacity: 1;
+			}
+			.searchbox{
+				float: right;
+				width: 400px;
+				height: 90px;	
+				overflow: hidden;
+			}
+			.search{
+				float: left;
+				width: 200px;	
+				margin: 0 auto;	
+				margin-top: 36px;	
+			}
+			.user{
+				width: 150px;
+				float: right;
+				margin: 0 auto;
+				margin-top: 35px;
+				margin-right: 30px;	
+			}
+			.user a{
+				padding: 200px 10px 5px 2px;
+				font-size: 22px;
+				color: #000000;
+			}
+			.home-te{
+				display: flex;
+				justify-content: space-between;
+				width: 1920px;
+				margin: 5px auto;
+				padding: 25px;
+				background-color: #acc2ea;
+			}
+			.home-te-1{
+				background-color: #ececec;
+				width: 30%;	
+			}
+			.home-te-1 h3{
+				font-size: 25px;
+				color: #000000;
+				letter-spacing: 2px;	
+			}
+			.home-te-1 p{
+				line-height: 1.4;
+				letter-spacing: 2px;
+				display: block;
+				color: ;
+				margin: 10px 0;
+				text-indent: 2em;
+			}
+			#main{
+				width: 1950px;
+				margin: auto;
+				background:#acc2ea;
+				padding: 10px;		
+			}
+			.main-title{
+				position: relative;
+				border-bottom: 2px solid #cccccc;
+				margin: 10px 0 15px 0;
+			}
+			.main-box{
+				display: flex;
+				justify-content: space-between;
+			}
+			.main-box-img li{
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.main-box-img li a {
+				display: inline-block;
+				width: 850px;
+				height: 440px;
+				color: #333;
+				padding-top: 35px;
+				text-align: center;
+				text-decoration: none;
+			    background-color: black;
+			}
+						
+			.main-box-img li:nth-child(even) a {
+				transform: rotate(10deg);
+			}
+			.main-box-img img {
+				width: 700px;
+				height: 400px;
+				transition: all 0.5s ease;
+			}
+			.main-box-img li:hover .img1{
+				transform: scale(1.2);
+			}
+			.main-box-specialimg{
+				width: 900px;
+				height: 500px;
+			}
+			.main-box-specialimg li .img2{
+			    float: left;
+				display: inline-block;
+				margin-left: 30px;
+				margin-bottom: 30px;
+			}						
+			.main-box-specialimg li a .img3{
+				display: inline-block;		
+				color: #333;
+				text-decoration: none;
+				background-color: black;
+			}
+			.main-box-specialimg li:nth-child(even) a {
+				transform: rotate(10deg);
+			}
+			.main-box-specialimg img {
+				width: 350px;
+				height: 450px;
+				transition: all 0.5s ease;
+			}
+			ul,li {
+				list-style: none;
+			}
+			ul,li,img {
+				padding: 10px;
+				margin: 0;
+				border: 0;
+			}
+			.main-box-specialimg li:hover .img2 {
+				box-shadow: 10px 10px 10px #333;
+				transform: rotate(-10deg);
+			}
+			.main-box-specialimg li:hover .img3 {
+				box-shadow: 10px 10px 10px #333;
+				transform: rotate(10deg);
+			}									
+			.main-box-text{
+				float: right;
+				width: 950px;
+				margin-top: 25px;
+			}
+			.main-box-text p{
+				text-indent: 2em;
+				margin-bottom: 50px;
+				font-size: 30px;
+				line-height: 1.5;
+			}
+			.bigbox{
+				width: 1950px;
+				margin:10px auto;
+				padding: 10px;
+				background-color: #acc2ea;	
+			}
+			.main-box-text2{
+				position: absolute;
+				top:2150px ;
+				left: 900px;
+				right: 100px;
+				bottom: 0px;	
+			}
+			.main-box-text2 p{
+				text-indent: 2em;	
+				font-size: 35px;
+				line-height: 1.5;
+			}	
+			h1,p,img{
+				margin:0;
+				padding:0;
+				border:0;
+			}	
+			.main2{
+				width:1950px;
+				height:800px;
+				margin: 0px;
+				padding: 20px;
+				background-color:#acc2ea;				
+			}
+			.box1{
+				position: relative;		           
+				width:300px;
+				height:500px;
+				padding: 100px;
+				left: 200px;
+				background-color: chartreuse;
+			    float: left;			
+				margin:20px auto;				
+     			perspective: 2000px; 							
+			}
+        	.box1 img, .text1{
+				position: absolute;            
+				top:0;
+				left:0;
+				width:500px;
+				height: 700px;
+			}
+			.box1 .text1{                              
+	     		background-color: rgba(0,0,0,0.5);  
+				color:white;
+			}
+			.box1 .text1 h1{
+				width:300px;
+				margin:80px auto 0;
+				font-size:30px;
+				text-align: center;
+			}
+			.box1 .text1 p{
+				width:400px;
+				margin:20px auto 0;
+				font-size:25px;
+				text-align: justify;
+			}
+			.zaran,.fan1{
+				backface-visibility: hidden;      /* 背面内容不可见 */
+				transition: all 0.5s ease-in 0s;  /* 过渡效果 */
+			}
+			.fan1{
+				transform: rotateY(-180deg);      /* 文字块不可见 */
+			}
+			.box1:hover .zaran{
+				transform: rotateY(180deg);       /* 图像不可见 */
+			}
+			.box1:hover .fan1{
+				transform: rotateY(0deg);         /* 文字块可见 */
+			}
+			.box2{
+				position: relative;	
+				width:300px;
+				height:500px;
+				padding: 100px;
+				
+				background-color: #ff5500;
+				float: right;
+				right: 400px;
+				margin:20px auto;				
+				perspective: 2000px; 
+			}
+			.box2 img, .text2{                     /* 图像层和遮罩层的样式，位置重叠 */
+				position: absolute;                  /* 绝对定位 */
+				top:0;
+				left:0;
+				width:500px;
+				height: 700px;
+			}
+			.box2 .text2{                              /* 遮罩层文本块的样式 */	
+				background-color: rgba(0,0,0,0.5);   /* 背景半透明 */
+				color:white;
+			}
+		    .box2 .text2 h1{
+				width:300px;
+				margin:80px auto 0;
+				font-size:30px;
+				text-align: center;
+			}
+			.box2 .text2 p{
+				width:400px;
+				margin:20px auto 0;
+				font-size:25px;
+				text-align: justify;
+			}
+			.cixiu,.fan2{
+				backface-visibility: hidden;      /* 背面内容不可见 */
+				transition: all 0.5s ease-in 0s;  /* 过渡效果 */
+			}
+			.fan2{
+				transform: rotateY(-180deg);      /* 文字块不可见 */
+			}
+			.box2:hover .cixiu{
+				transform: rotateY(180deg);       /* 图像不可见 */
+			}
+			.box2:hover .fan2{
+				transform: rotateY(0deg);         /* 文字块可见 */
+			}	
+			#footer{
+				width: 1950px;
+				height: 50px;
+				background-color:#acc2ea;
+				text-align: center;
+							
+			}	
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logobox">
+				<img src="img/logo.png">
+				<h3> 丹寨蜡染非遗之魅</h3>
+			</div>
+			
+		
+				<div id="nav">
+					<ul >
+						<li class="first"><a href="index.html">首页</a></li>
+						<li><a href="HistoricalCulture.html">历史文化</a></li>
+						
+						<li><a href="FeiYi.html">非遗传承</a></li>
+						<li><a href="Protect.html">传承保护</a></li>
+						<li><a href="zy.html">个人主页</a></li>
+					</ul>
+				</div>
+				<div class="searchbox">
+					<div class="user">
+					    <a class="login" href="DLZC.html" target="_blank">登录</a>
+					    <a class="register" href="ZC-C.html" target="_blank">注册</a>
+					</div>
+					
+					<div class="search">
+					    <input type="text" placeholder="请输入关键词">
+					    <button>确定</button>
+					</div>	
+					
+				</div>
+			</div>
+				<div id="banner">
+					<img class="imgLBT active" src="img/11111111.jpg" alt="">
+					<img class="imgLBT" src="img/22222.jpg" alt="">
+					<img class="imgLBT" src="img/33333333.jpg" alt="">
+					<img class="imgLBT" src="img/4444444.jpg" alt="">
+					<img class="imgLBT" src="img/555555.jpg" alt="">
+					<img class="imgLBT" src="img/666666.jpg" alt="">	
+					<img class="imgLBT" src="img/7777777.jpg" alt="">	
+				</div>
+				<div class="home-te">
+					<div class="home-te-1">
+						<h3>自然风光</h3>
+						
+						<p>龙泉山：龙泉山的山势雄伟壮丽，植被郁郁葱葱，每年四五月间，山上的杜鹃花盛开，美不胜收，吸引了众多游客前来观赏。
+
+                           高要梯田：这是一个充满自然美和人文韵味的地方，层层叠叠的梯田仿佛一幅美丽的画卷，让人流连忘返。
+						   排庭瀑布：有“黔东第一瀑”之称，瀑布如银河落九天，气势磅礴，非常壮观。</p>
+					</div>
+					<div class="home-te-1">
+						<h3>人文景观</h3>
+						
+						<p>万达民族风情小镇：将苗族、侗族等少数民族的传统文化与现代元素相结合，有许多特色店铺、餐厅和表演，让游客感受到浓郁的民族风情。
+
+                           
+
+                            排牙村：被誉为“中国芦笙第一村”，这里的芒筒、芦笙制作精良，曲调悠扬，曾多次参加国内外各种文艺表演和比赛。
+
+                             
+</p>
+					</div>
+					<div class="home-te-1">
+						<h3>非物质文化遗产</h3>
+						
+						<p>
+苗族蜡染：丹寨县的苗族蜡染技艺历史悠久，图案精美，色彩鲜艳，是国家级非物质文化遗产之一。
+
+苗族锦鸡舞：苗族锦鸡舞是苗族人民的传统舞蹈，舞姿优美，具有浓郁的民族特色。
+
+苗族服饰：苗族服饰款式多样，工艺精湛，体现了苗族人民的智慧和审美。</p>
+					</div>
+				</div>
+				<div id="main">
+					<div class="main-title">
+						<h3>东方第一染-丹寨</h3>
+					</div>
+					<div class="main-box">
+						<div class="main-box-img">
+						<li><a href="img/丹寨11.jpg"><img src="img/丹寨11.jpg" alt="" class="img1"></a></li>
+						</div>
+					
+					    <div class="main-box-text">
+						     <p>丹寨县位于贵州省东部、黔东南州西部，因海拔较高，自然气候凉爽，素有“云上丹寨”的美誉。
+							 丹寨民族文化底蕴厚重，是历史上数支苗族迁徙路线上的居留地，是全国唯一完整保留
+							 祭祀蚩尤的“祭尤节”的地方，民族风情浓郁，民族节日众多，民族文化底蕴深厚，拥有苗族贾理、锦鸡舞、古法造纸等8项国家级、
+							 22项省级、34项州级非物质文化遗产，有17个国家级传统村落、15个中国少数民族特色村寨，被授予“中国乌笼之乡”
+							 “蜡染文化之乡”“锦鸡文化之乡”等称号，被誉为苗族文化的活态博物馆。
+							 丹寨交通区位优势明显，面向珠三角、背靠大西南，贵广高铁、沪昆高铁和厦蓉高速、沪昆高速穿过县境周边。
+							 </p>
+					    </div>
+					</div>
+				</div>
+				<div class="bigbox">
+					<div class="main-title">
+						<h3>特色风景</h3>
+					</div>
+					<ul class="main-box-specialimg">
+									<li><a href="img/丹寨小镇.jpg" >
+									<img src="img/丹寨小镇.jpg"  class="img2"></a> </li>
+									<li><a href="img/龙泉山.jpg" >
+									<img src="img/龙泉山.jpg"  class="img3"></a> </li>
+						
+						</ul>
+								
+							<div class="main-box-text2">	
+								
+								<p>丹寨小镇：这是一个集非物质文化遗产保护、传承、体验于一体的产、城、景、文、旅、商深度结合的文化旅游小镇，
+								国家4A级旅游景区。</p>
+ <p>龙泉山：集佛教、道教于一山，自古就是得天独厚的旅游胜地。沿石径依山而上，途经九百九十九级台阶，
+ 主要景点有龙泉山寺、蟠龙戏珠、古战场遗址、古碾房遗迹等，人文景观和自然景观极佳。
+</p>
+							
+					</div>
+					</div>
+					<div class="main2">
+						<div class="main-title">
+							<h3>传统手工</h3>
+						</div>
+					<div class="box1">
+						
+								<img src="img/蜡染.jpg" alt="蜡染" class="zaran"\>
+								<div class="text1 fan1">
+								<h1>蜡染技艺</h1>
+								<p>
+								苗族蜡染技艺是一种古老的印染手工艺，与扎染、夹缬并称为我国古代三大印花工艺。
+								其制作过程繁琐，包括布料制作、蜡液制作、蓝靛制作、画蜡、浸染、脱蜡、缝合等十来道工艺。丹寨蜡染以自然纹为主，
+								图案通常以自然界中的花鸟鱼虫为素材，造型生动，活泼流畅，富于夸张性。其中，排倒、排莫两个村寨的蜡染技艺最具典型代表。</p>
+							</div>
+						</div>		
+						<div class="box2">	
+				
+				
+					<img src="img/锦鸡舞.jpg" alt="锦鸡舞" class="cixiu">
+					<div class="text2 fan2">
+					<h1>苗族锦鸡舞</h1>
+					<p>苗族锦鸡舞是丹寨的另一项非遗文化，舞者身着锦鸡羽毛装饰的服饰，模仿锦鸡的动作，展现出神秘而庄重的气氛。</p>
+			</div>
+						</div>
+						</div>
+				<div id="footer">
+							<p align=center>
+					<sup>&copy;</sup>张妍20220000597
+				</div><!--页面底部·-->
+	</body>
+	<script>
+		function startSlideShow(){
+			var images = document.querySelectorAll(".imgLBT");
+			var currentIndex=0;
+			
+			setInterval(function(){
+				images[currentIndex].classList.remove("active")
+				currentIndex = (currentIndex + 1)%images.length
+				images[currentIndex].classList.add("active")
+			},3000)
+		}
+		startSlideShow()
+	</script>
+</html>

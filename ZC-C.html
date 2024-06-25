@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+			    margin: 0;
+			    padding: 0;
+			}
+			body {
+			    background-color: #f3f5f7;
+			    color: #767676;
+			    font-size: 14px;
+			}
+			a {
+			    text-decoration: none;
+			}
+			li {
+			    list-style-type: none;
+			}
+			/* 顶端 */
+			.header {
+			    width: 1000px;
+			    height: 70px;
+			    margin: 0 auto;
+			    padding: 20px 15px;
+			}
+			
+			
+			.clock {
+			    float: right;
+			}
+			#dateTime {
+			    width: 140px;
+			    line-height: 70px;
+			    float: right;
+			}
+			/* 版心 */
+			.banner {
+			    width: 1000px;
+			    height: 390px;
+			    margin: 0 auto;
+			    padding: 10px;
+			    border-top: 1px solid #6491aa;
+			}
+			
+			
+			.form-content {
+			    width: 1000px;
+			    height: 510px;
+			    margin: 0 auto;
+			    background-color: #f3f5f7;
+			}
+			#news {
+			    position: relative;
+			    margin-top: 90px;
+			    float: left;
+			    width: 600px;
+			    height: 360px;
+			    background-color: #e8ebeb;
+			}
+			#news::after {
+			    position: absolute;
+			    content: '';
+			    width: 100%;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    box-shadow: inset 0px 0px 10px 8px #f3f5f7;
+			}
+			.formarea {
+			    float: right;
+			    width: 400px;
+			    height: 510px;
+				margin-top: 70px;
+			    background-color: #f3f5f7;
+			}
+			.form-item {
+			    width: 100%;
+			    height: 40px;
+			    margin-bottom: 16px;
+			    box-sizing: border-box;
+			    font-size: 12px;
+			}
+			.inputips {
+			    float: left;
+			    width: 74px;
+			    height: 40px;
+			    text-align: right;
+			    line-height: 40px;
+			    color: #000000;
+			}
+			.input-box {
+			    float: left;
+			    position: relative;
+			    width: 300px;
+			
+			    border: 1px solid #cccccc;
+			}
+			[type="text"],[type="password"] {
+			    width: 92%;
+			    padding: 0 12px;
+			    background-color: #f3f5f7;
+			    border: none;
+			    line-height: 40px;
+			    font-size: 12px;
+			}
+			.send-cta button {
+			    position: absolute;
+			    right: 10px;
+			    bottom: 2px;
+			    width: 66px;
+			    height: 36px;
+			    font-size: 12px;
+			    text-align: center;
+			    background-color: #f3f5f7;
+			    color: #767676;
+			    border: none;
+			    cursor: pointer;
+			}
+			.sub-box {
+			    float: left;
+			    width: 300px;
+			    height: 40px;
+			    text-align: left;
+			}
+			.check-box p {
+			    float: right;
+			    width: 278px;
+			    height: 18px;
+			    line-height: 18px;
+			    color: #000;
+			}
+			.sub-box .check-box a {
+			    color: #6491aa;;
+			}
+			.sub-box button {
+			    width: 100%;
+			    height: 100%;
+			    text-align: center;
+			    font-size: 18px;
+			    letter-spacing: .1rem;
+			    color: #ffffff;
+			    background-color: #6491aa;
+			    border: none;
+			    cursor: pointer;
+			}
+			.sub-box button:hover {
+			    background-color: #59849b;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+		<h1 class="logo-account">账户注册</h1>
+		        <div id="dateTime"></div>
+		    </div>
+		<div class="banner">
+			<div class="form-content">
+			    <div id="news"><img src="img/11111111.jpg" width="100%" height="100%"></div>
+			    <div class="formarea">
+			        <form action="index.html" method="post" name="form-register">
+			            <div class="form-item">
+			                <div class="inputips"><label for="nick">会员名：</label></div>
+			                <div class="input-box"><input type="text" id="nick" placeholder="请设置会员名" maxlength="16"required>
+			                </div>
+			            </div>
+			            <div class="form-item">
+			                <div class="inputips"><label for="psd">登录密码：</label></div>
+			                <div class="input-box"><input type="password" id="psd" placeholder="请设置登录密码" maxlength="16"
+			                        required>
+			                </div>
+			            </div>
+			            <div class="form-item">
+			                <div class="inputips"><label for="repsd">密码确认：</label></div>
+			                <div class="input-box"><input type="password" id="repsd" placeholder="请设置登录密码" maxlength="16"
+			                        required>
+			                </div>
+			            </div>
+			            <div class="form-item">
+			                <div class="inputips"><label for="contactname">联系姓名：</label></div>
+			                <div class="input-box"><input type="text" id="contactname" placeholder="请填写真实姓名" maxlength="16"
+			                        required>
+			                </div>
+			            </div>
+			            <div class="form-item">
+			                <div class="inputips"><label for="contractphoto">联系电话：</label></div>
+			                <div class="input-box"><input type="text" id="contractphoto" maxlength="11" required></div>
+			            </div>
+			            <div class="form-item">
+			                <div class="inputips"><label for="captcha">验证码：</label></div>
+			                <div class="input-box"><input type="text" id="captcha" maxlength="6" required>
+			                    <div class="send-cta"><button>发送验证码</button></div>
+			                </div>
+			            </div>
+					
+					    <div class="form-item">
+					       <div class="inputips"></div>
+					        <div class="sub-box"><button>同意并注册</button></div>
+					      </div>
+					    </div>
+					</div>
+				
+				</form>
+			
+	</body>
+</html>

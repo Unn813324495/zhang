@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>传承保护</title>
+		<style  type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				font-size: 20px;
+				
+				font-family: 华文楷体;
+				
+				
+				
+			}
+			#header{
+				width: 2000px;
+				height: 100px;
+				margin: 5px auto;
+				padding: 10px 0;
+				background-color: #acc2ea;
+				border-radius: 5px;
+			}
+			.logobox{
+				width: 600px;
+				margin: auto;
+				float: left;
+			}
+			.logobox img{
+				float: left;
+				width: 110px;
+				padding: 0px 0px 0px 50px;
+			}
+			.logobox h3{
+				float: right;
+				font-size: 50px;
+				line-height: 110px;
+				text-align: center;
+				color: #950000;
+				letter-spacing: 3px;
+				font-weight: normal;
+				font-family:华文行楷;
+			}
+			
+			#nav ul li {
+				width: 100px;
+				padding: 20px;
+				text-align: center;
+				float: left;
+				font-size: 25px;
+				list-style: none;
+				height: 70px;
+				line-height: 100px;
+				margin: 0 30px;
+				text-decoration: none;	
+			}
+			#nav ul li a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#nav ul li a:hover{
+				color: darkgoldenrod;
+			}
+			#nav ul .first a{
+				color:darkgoldenrod ;
+			}
+			.user a{
+				text-decoration: none;
+			}
+			.searchbox{
+				float: right;
+				width: 400px;
+				height: 90px;	
+				overflow: hidden;
+			}
+			.search{
+				float: left;
+				width: 200px;	
+				margin: 0 auto;	
+				margin-top: 55px;	
+			}
+			.user{
+				width: 150px;
+				float: right;
+				margin: 0 auto;
+				margin-top: 55px;
+				margin-right: 30px;	
+			}
+			.user a{
+				padding: 300px 10px 5px 2px;
+				font-size: 22px;
+				color: #000000;
+			}
+			
+			#banner{
+				width: 2000px;
+				height: 1000px;
+				margin: auto;
+				position: relative;		
+			}
+			.imgLBT{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: opacity 2s ease-in-out;
+			}
+			.imgLBT.active{
+				opacity: 1;
+			}
+			
+			.main{
+				width: 1990px;
+				height: 2000px;
+				margin-top: 10px;
+				background-color: #ffffff;
+			}
+			.main-1{
+				width: 1900px;
+				height: 700px;
+				padding: 50px;
+				background-color: #acc2ea;
+			}
+			.main-1 img{
+				width: 450px;
+				height: 600px;
+				padding-left: 20px;
+				float: left;
+			}
+			.main-1 p{
+				width: 1300px;
+				height: 600px;
+				font-size: 40px;
+				padding-top: 30px;
+				padding-right: 30px;
+				float: right;
+			}
+			.main-1 h1{
+			font-size: 60px;
+			text-align: center;
+			}
+			.main-2{
+				width: 1900px;
+				height: 700px;
+				padding: 50px;
+				margin-top: 10px;
+				background-color: #acc2ea;
+			}
+			.main-2 img{
+				width: 450px;
+				height: 600px;
+				padding-left: 20px;
+				float: left;
+			}
+			.main-2 p{
+				width: 1300px;
+				height: 600px;
+				font-size: 30px;
+				padding-top: 30px;
+				padding-right: 30px;
+				float: right;
+			}
+			.main-2 h1{
+			font-size: 60px;
+			text-align: center;
+			}
+			.main-3{
+				width: 1900px;
+				height: 700px;
+				padding: 50px;
+				
+				margin-top: 10px;
+				background-color: #acc2ea;
+			}
+			.main-3 img{
+				width: 450px;
+				height: 600px;
+				padding-left: 20px;
+				float: left;
+			}
+			.main-3 p{
+				width: 1300px;
+				height: 600px;
+				font-size: 35px;
+				padding-top: 30px;
+				padding-right: 30px;
+				float: right;
+			}
+			.main-3 h1{
+			font-size: 60px;
+			text-align: center;
+			}
+			.main-4{
+				width: 1900px;
+				height: 700px;
+				padding: 50px;
+				margin-top: 10px;
+				background-color: #acc2ea;
+			}
+			.main-4 img{
+				width: 450px;
+				height: 600px;
+				padding-left: 20px;
+				float: left;
+			}
+			.main-4 p{
+				width: 1300px;
+				height: 600px;
+				font-size: 40px;
+				padding-top: 30px;
+				padding-right: 30px;
+				float: right;
+			}
+			.main-4 h1{
+			font-size: 60px;
+			text-align: center;
+			}
+			#footer{
+				width: 1990px;
+				height: 50px;
+				margin-top: 1240px;
+				background-color:#acc2ea;
+				text-align: center;
+							
+			}
+			</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logobox">
+				<img src="img/logo.png" alt="">
+				<h3> 丹寨蜡染非遗之魅</h3>
+			</div>
+			
+		
+				<div id="nav">
+					<ul >
+						<li ><a href="index.html">首页</a></li>
+						<li><a href="HistoricalCulture.html">历史文化</a></li>
+						
+						<li ><a href="FeiYi.html">非遗传承</a></li>
+						<li class="first"><a href="Protect.html">传承保护</a></li>
+						<li ><a href="zy.html">个人主页</a></li>
+					</ul>
+				</div>
+				<div class="searchbox">
+					<div class="user">
+					    <a class="login" href="DLZC.html" target="_blank">登录</a>
+					    <a class="register" href="ZC-C.html" target="_blank">注册</a>
+					</div>
+				
+					<div class="search">
+					    <input type="text" placeholder="请输入关键词">
+					    <button>确定</button>
+					</div>	
+					
+				</div>
+			</div>
+			<div id="banner">
+				<img class="imgLBT active" src="img/11111111.jpg" alt="">
+				<img class="imgLBT" src="img/22222.jpg" alt="">
+				<img class="imgLBT" src="img/33333333.jpg" alt="">
+				<img class="imgLBT" src="img/4444444.jpg" alt="">
+				<img class="imgLBT" src="img/555555.jpg" alt="">
+				<img class="imgLBT" src="img/666666.jpg" alt="">	
+				<img class="imgLBT" src="img/7777777.jpg" alt="">	
+			</div>
+			<div class="box-one">
+				<div class="box-one-left"></div>
+				<div class="box-one-right"></div>
+			</div>
+			<div class="main">
+								<div class="main-1">
+									<h1>煮蜡</h1>
+									<img src="img/zhula.jpg">
+									<p>
+			1. 处理布料：将自产的布用草灰漂白洗净，然后用煮熟的芋捏成糊状涂抹于布的反面，待晒干后用牛角磨平、磨光；</br>
+			
+			2. 点蜡：把白布平帖在木板或桌面上，把蜂蜡放在陶瓷碗或金属罐里，用火盆里的木炭灰或糠壳火使蜡融化，便可以用铜刀蘸蜡，画出各种图案花纹；</br>
+			
+			3. 染色：把画好的蜡片放在蓝靛染缸里，一般每一件需浸泡五、六天。第一次浸泡后取出晾干，便得浅蓝色；再放入浸泡数次，便得深蓝色。如果需要在同一织物上出现深浅两色的图案，便在第一次浸泡后，在浅蓝色上再点绘蜡花浸染，染成以后即现出深浅两种花纹；</br>
+			
+			4. 去蜡：经过冲洗，然后用清水煮沸，煮去蜡质，经过漂洗后，布上就会显出蓝、白分明的花纹来。</p>
+								</div>
+								<div class="main-2">
+									<h1>画蜡</h1>
+									<img src="img/huala.jpg">
+									<p>1. 准备工具和材料：蜡染需要用到蜡刀、蜂蜡、布料、火炉等工具和材料。</br>
+			
+			2. 设计图案：在进行画蜡之前，需要先设计好要绘制的图案。可以根据个人喜好和创意来设计，也可以参考传统的蜡染图案。</br>
+			
+			3. 融化蜂蜡：将蜂蜡放在火炉上或专用的加热器中融化，使其成为液态。</br>
+			
+			4. 调节蜡温：根据需要，将蜡温调节到适宜的温度。一般来说，蜡温不宜过高或过低，以确保蜡能够均匀地附着在布料上。</br>
+			
+			5. 画蜡：用蜡刀蘸取融化的蜂蜡，然后在布料上进行绘制。可以根据设计好的图案，用蜡刀勾勒出线条、形状和图案。</br>
+			
+			6. 细节处理：在画蜡的过程中，可以根据需要进行细节处理，如填充颜色、加粗线条等。</br>
+			
+			7. 检查和修正：完成画蜡后，仔细检查图案是否完整、清晰。如有需要，可以进行修正和补充。</br>
+			
+			8. 等待蜡凝固：让绘制好的布料自然冷却，使蜡凝固在布料上。</br>
+			
+			
+			10. 准备染色：完成画蜡后，就可以进行染色步骤了。将布料放入染缸中，按照染色的要求进行操作</p>
+								</div>
+								<div class="main-3">
+									<h1>染色</h1>
+									<img src="img/ranse.jpg">
+									<p>
+			1. 准备染液：根据需要准备相应颜色的染液，可以使用天然染料或化学染料。将染料溶解在适量的水中，搅拌均匀，确保染液的浓度适中。</br>
+			
+			2. 浸泡布料：将画好蜡的布料放入染液中，让其完全浸泡。浸泡的时间根据染料的种类、颜色的深浅和个人喜好而定。一般来说，浸泡时间越长，颜色就会越深。</br>
+			
+			3. 搅拌和翻动：在浸泡过程中，可以适当搅拌或翻动布料，以确保布料均匀地吸收染料。这样可以获得更均匀的染色效果。</br>
+			
+			4. 控制温度：染色过程中的温度也会影响染色效果。有些染料可能需要在特定的温度下进行染色，以达到最佳效果。可以根据染料的要求控制水温。</br>
+			
+			5. 漂洗和清洗：染色完成后，将布料取出，用清水漂洗，以去除多余的染料。然后用洗涤剂或清水彻底清洗布料，确保布料上没有残留的染料和蜡。</br>
+			
+			6. 晾干和固色：将清洗后的布料晾干，然后根据需要进行固色处理。固色可以帮助固定染料的颜色，使其不易褪色。</p>
+								</div>
+								<div class="main-4">
+									<h1>晾晒</h1>
+									<img src="img/liangshai.jpg">
+									<p>1. 浸染完成后：将浸染后的布料从染缸中取出，用清水冲洗，去除多余的染料和杂质。</br>
+			
+			2. 晾晒：将布料挂在通风良好的地方，避免阳光直射。可以使用衣架或绳子将布料吊起，让其自然晾干。</br>
+			
+			3. 翻面晾晒：在晾晒过程中，适时翻面，以确保布料两面都能均匀晾干。</br>
+			
+			4. 避免暴晒：长时间的阳光暴晒可能会导致颜色褪色或布料受损，因此尽量选择阴凉通风的地方晾晒。</br>
+			
+			5. 注意防潮：如果环境潮湿，可能会影响晾干速度，可以考虑在干燥的室内或使用干燥剂。</br>
+			
+			6. 完全晾干：确保布料完全晾干后，再进行下一步的处理或使用。</br>
+			</p>
+								</div>
+							</div>
+		<div id="footer">
+					<p align=center>
+			<sup>&copy;</sup>张妍20220000597
+		</div><!--页面底部·-->
+	</body>
+	<script>
+		function startSlideShow(){
+			var images = document.querySelectorAll(".imgLBT");
+			var currentIndex=0;
+			
+			setInterval(function(){
+				images[currentIndex].classList.remove("active")
+				currentIndex = (currentIndex + 1)%images.length
+				images[currentIndex].classList.add("active")
+			},3000)
+		}
+		startSlideShow()
+	</script>
+</html>
